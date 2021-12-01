@@ -1,1 +1,1 @@
-# Terra-React-Native-SDK
+# Terra-React-Native
