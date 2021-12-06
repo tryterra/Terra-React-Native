@@ -1,7 +1,9 @@
 # Terra-React-Native
 
-Depending on your dev workflow:
-- Expo: use `expo-web-browser` from https://docs.expo.dev/versions/latest/sdk/webbrowser/
-- React native with iOS / Android manual management: use `react-native-inappbrowser-reborn` from https://www.npmjs.com/package/react-native-inappbrowser-reborn
+How to setup in-app browser for Terra login:
+- Expo CLI using `expo-web-browser` (further setup details [here](https://docs.expo.dev/versions/latest/sdk/webbrowser/))
+- React Native CLI using `react-native-inappbrowser-reborn` (further setup details [here](https://www.npmjs.com/package/react-native-inappbrowser-reborn))
 
-This repo has a demo for `expo-web-browser`
+[TerraExpo](https://github.com/tryterra/Terra-React-Native/tree/main/TerraExpo) and [TerraReactNative]([TerraExpo](https://github.com/tryterra/Terra-React-Native/tree/main/TerraReactNative) contain simple demos for Expo CLI and React Native CLI respectively
+
+![ios](./images/ios.gif)
