@@ -1,19 +1,21 @@
-import { StatusBar } from "expo-status-bar";
-import React from "react";
-import { Button, StyleSheet, Text, View } from "react-native";
-
+import React, { useState } from "react";
+import { Button, Text, View, StyleSheet } from "react-native";
+import * as WebBrowser from "expo-web-browser";
 
 export default function App() {
+  const [result, setResult] = useState(null);
+
+  const openWidget = async () => {
+    // customize redirect URL to get results wanted
+    let result: any = await WebBrowser.openBrowserAsync(
+      "https://widget.tryterra.co/session/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+    );
+    setResult(result);
+  };
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <Button
-        onPress={() => console.log("hey")}
-        title="Learn More"
-        color="#841584"
-        accessibilityLabel="Learn more about this purple button"
-      />
-      <StatusBar style="auto"/>
+      <Button title="Open Terra Widget" onPress={openWidget} />
+      <Text>{result && JSON.stringify(result)}</Text>
     </View>
   );
 }
@@ -25,4 +27,5 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  button: {},
 });
